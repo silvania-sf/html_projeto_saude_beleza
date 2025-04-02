@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Delius&family=Updock&display=swap');
+
+:root{
+    --preto: black;
+    --branco: white;
+    --cinza: rgb(221, 220, 220);
+    --verde: rgb(6, 184, 6);
+    --verdec: rgb(82, 219, 82);
+    --violt: rgb(238, 130, 238);
+    --orchd: rgb(218, 112, 214);
+    --viodk: rgb(148, 0, 211);
+    --indig: rgb(75, 0, 130);    
+}
+
+/* Configurações do site */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html{font-family: Arial, Helvetica, sans-serif; font-size: 1em;}
+
+header{
+    background-color: var(--violt); 
+    color: var(--branco); 
+    padding: auto; 
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+nav{display: block; text-align: center; font-size: 1.3em; word-spacing: 10px;}
+
+a{text-decoration: none; color: var(--branco); font-weight: bold;}
+
+a:hover{color: var(--cinza);}
+
+footer{background-color: var(--violt); color: var(--branco); text-align: center;}
+
+body{background-color: var(--branco);}
+
+main{
+    background-color: var(--branco); 
+    padding: 1%; 
+    margin: auto; 
+    width: 90%;
+}
+
+aside{
+    background-color: var(--branco); 
+    padding: 1%; 
+    margin: auto; 
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 0px;
+}
+
+/* Configurações de título */
+h1{font-size: 2.5em; margin-top: 3%;}
+h2{font-size: 1.5em;}
+h3{font-size: 4em; font-family: "Alex Brush", cursive; text-shadow: 2px 2px 2px var(--preto);}
+h4{font-size: 1.5em; text-shadow: 2px 2px 2px var(--preto);}
+h1, h2, h3, h4, h5, h6{padding-top: 0.5%; padding-bottom: 0.5%;}
+
+/* Configurações de título para dispositivos móveis */
+@media(min-width: 320px) and (max-width: 1024px){
+    h1{font-size: 2.5em; margin-top: 10%;}
+}
+
+/* Configurações de imagem */
+img{width: 100%; padding-top: 2%;}
+
+/* Configurações de parágrafos */
+p{padding-top: 1%; padding-bottom: 1%;}
+
+/* Configurações de parágrafos para dispositivos móveis */
+@media(min-width: 320px) and (max-width: 1024px){
+    p{padding-top: 3%; padding-bottom: 3%;}
+}
+
+/* Divs */
+.separador{margin-top: 8%;}
+.separador-conteudo{margin-top: 0.5%;}
+
+ /* Configurações de divs para dispositivos móveis */
+ @media(min-width: 320px) and (max-width: 1024px){
+    .separador{margin-top: 27%;}
+    .separador-conteudo{margin-top: 1%;}
+ }
+
+ /* Configurações do grid */
+ .grid-conteudo{background-color: var(--branco); padding-top: 130px;}
+
+ .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    max-width: 1024px;
+    margin: auto;
+    gap: 10px;
+ }
+
+ .grid div{background-color: var(--branco); text-align: center; padding: 2px;}
+
+ /* Trabalhando com flexbox */
+
+ .grid-equipe{background-color: var(--branco);}
+
+ .grid-equipe{
+    display: flex; /* alterando o tipo de display para flex */
+    justify-content: center; /* centralizando horizontalmente */
+    align-items: center; /* centralizando verticalmente */
+    flex-wrap: wrap; /* alinhar/quebrar conforme o tamanho da tela */
+    max-width: 1024px;
+    margin: auto;
+    gap: 8px;
+    padding: auto;
+ }
+
+ .grid div{background-color: var(--branco); text-align: center; padding: 2px;}
+
+ /* Configurações de grid para dispositivos moveis */
+ @media(min-width: 320px) and (max-width: 1024px){
+    .grid-conteudo{background-color: var(--branco); padding-top: 110px;}
+
+    .grid{
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+       max-width: 1024px;
+       margin: auto;
+       gap: 2px;
+    }
+   
+    .grid div{background-color: var(--branco); text-align: center; padding: 2px;}    
+}
+
+ /* Configurações para botão */
+ button{
+    padding: 8px 20px 8px 20px;
+    background-color: var(--verde);
+    color: var(--branco);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.3em;
+    display: block;
+    margin: auto;
+    transition: 0.4s ease;
+ }
+
+ button:hover{background: var(--verdec); text-shadow: 1px 1px var(--preto);}
+
+ ul{padding-left: 3%;}
