@@ -231,6 +231,7 @@ p#conteudo{text-align: justify;}
     font-family: "Inter", sans-serif;
     color: var(--indig);
     text-shadow: 2px 2px 2px var(--branco);
+    z-index: 1;
  }
 
  @media(min-width: 320px) and (max-width: 820px){
@@ -248,3 +249,5 @@ p#conteudo{text-align: justify;}
         text-shadow: 2px 2px 2px var(--branco);        
      }
  }   
+
+ .redes-sociais{width: 40px; height: 40px;} /* pensar nos dispositivos menores */

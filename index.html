@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="img/sb-logo.ico" type="image/x-icon">
     <title>Saúde & Beleza</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header>
@@ -26,7 +27,24 @@
             <div>
                 <h1>Agende sua avaliação hoje mesmo!</h1>
                 <br>
-                <h2>Seja sua prioridade.</h2>
+                <h2>Seja sua prioridade. Cuide da sua saúde e bem-estar e tenha uma vida plena.</h2>
+
+                <script>
+                    function escrita(elemento){
+                        const textoArray = elemento.innerHTML.split('');
+                        elemento.innerHTML = '';
+
+                        textoArray.forEach((letra, i) => {
+                            setTimeout(function(){
+                                elemento.innerHTML += letra;
+                            }, 80*i)
+                        });
+                    }
+                    const animacao = document.querySelector('h2');
+                    escrita(animacao);
+                </script>
+
+                <br>
                 <p class="conteudo">
                     O autocuidado é um ato de amor próprio, priorize-se e cuide de si mesmo.<br>
                     Descubra como o bem-estar pessoal pode irradiar para todas as áreas da sua vida!
@@ -123,8 +141,19 @@
         <p>
             WhatsApp: (99) 99999-9999<br>
             CNPJ: 00.000.000/00000-00<br>
-        </p> 
+         
+            <a href="https://instagram.com.br" target="_blank">
+                <img class="redes-sociais" src="img/Instagram.webp" alt="Logo Instagram">
+            </a>
+            <a href="https://youtube.com.br" target="_blank">
+                <img class="redes-sociais" src="img/Youtube.webp" alt="Logo YouTube">
+            </a>
+            <a href="https://tiktok.com" target="_blank">
+                <img class="redes-sociais" src="img/Tiktok.webp" alt="Logo TikTok">
+            </a>
+        </p>
         <h6>Desenvolvido por: Silvania de Sousa Francisco</h6>
     </footer>
+    <script src="script.js"></script> <!-- ideal colocar o JS no final do código -->
 </body>
 </html>
