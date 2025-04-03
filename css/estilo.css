@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Delius&family=Updock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --preto: black;
@@ -19,7 +20,7 @@
     padding: 0;
 }
 
-html{font-family: Arial, Helvetica, sans-serif; font-size: 1em;}
+html{font-family: "Inter", sans-serif; font-size: 1em;}
 
 header{
     background-color: var(--violt); 
@@ -29,15 +30,32 @@ header{
     width: 100%;
     margin: 0;
     text-align: center;
+    z-index: 1; /*Especifica a camada/posicionamento de um elemento */
 }
 
 nav{display: block; text-align: center; font-size: 1.3em; word-spacing: 10px;}
 
 a{text-decoration: none; color: var(--branco); font-weight: bold;}
 
-a:hover{color: var(--cinza);}
+a:hover{background-color: var(--viodk);}
 
-footer{background-color: var(--violt); color: var(--branco); text-align: center;}
+.btn{
+    display: block;
+    margin: auto;
+    width: 160px;
+    background-color: var(--indig);
+    padding: 10px 25px 10px 25px;
+    border-radius: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+footer{
+    background-color: var(--violt); 
+    color: var(--branco); 
+    text-align: center;
+    text-shadow: 1px 1px 1px var(--preto);
+}
 
 body{background-color: var(--branco);}
 
@@ -53,30 +71,43 @@ aside{
     padding: 1%; 
     margin: auto; 
     width: 90%;
-    border-radius: 15px;
-    box-shadow: 1px 1px 5px 0px;
+    /*border-radius: 15px;
+    box-shadow: 1px 1px 1px 1px; Analisar */
 }
 
 /* Configurações de título */
-h1{font-size: 2.5em; margin-top: 3%;}
-h2{font-size: 1.5em;}
+h1{font-size: 2.5em; margin-top: 3%; color: var(--indig);}
+h2{font-size: 1.5em; color: var(--indig)}
 h3{font-size: 4em; font-family: "Alex Brush", cursive; text-shadow: 2px 2px 2px var(--preto);}
 h4{font-size: 1.5em; text-shadow: 2px 2px 2px var(--preto);}
 h1, h2, h3, h4, h5, h6{padding-top: 0.5%; padding-bottom: 0.5%;}
 
 /* Configurações de título para dispositivos móveis */
-@media(min-width: 320px) and (max-width: 1024px){
+@media(min-width: 320px) and (max-width: 820px){
     h1{font-size: 2.5em; margin-top: 10%;}
 }
 
 /* Configurações de imagem */
 img{width: 100%; padding-top: 2%;}
 
+.img-site{
+    width: 100%; 
+    padding-top: 2%;
+    background: radial-gradient(var(--orchd), var(--branco), var(--branco));
+    border-radius: 100%;    
+}
+
 /* Configurações de parágrafos */
-p{padding-top: 1%; padding-bottom: 1%;}
+p{padding-top: 15px; padding-bottom: 15px;}
+
+p.especialistas{ /* Todo p que tiver uma classe especialistas */
+    text-align: center;
+    color: var(--indig);
+    font-weight: bold;
+}
 
 /* Configurações de parágrafos para dispositivos móveis */
-@media(min-width: 320px) and (max-width: 1024px){
+@media(min-width: 320px) and (max-width: 820px){
     p{padding-top: 3%; padding-bottom: 3%;}
 }
 
@@ -85,7 +116,7 @@ p{padding-top: 1%; padding-bottom: 1%;}
 .separador-conteudo{margin-top: 0.5%;}
 
  /* Configurações de divs para dispositivos móveis */
- @media(min-width: 320px) and (max-width: 1024px){
+ @media(min-width: 320px) and (max-width: 820px){
     .separador{margin-top: 27%;}
     .separador-conteudo{margin-top: 1%;}
  }
@@ -107,7 +138,7 @@ p{padding-top: 1%; padding-bottom: 1%;}
 
  .grid-equipe{background-color: var(--branco);}
 
- .grid-equipe{
+ .grid-equipe-sb{
     display: flex; /* alterando o tipo de display para flex */
     justify-content: center; /* centralizando horizontalmente */
     align-items: center; /* centralizando verticalmente */
@@ -121,7 +152,7 @@ p{padding-top: 1%; padding-bottom: 1%;}
  .grid div{background-color: var(--branco); text-align: center; padding: 2px;}
 
  /* Configurações de grid para dispositivos moveis */
- @media(min-width: 320px) and (max-width: 1024px){
+ @media(min-width: 320px) and (max-width: 820px){
     .grid-conteudo{background-color: var(--branco); padding-top: 110px;}
 
     .grid{
@@ -151,3 +182,59 @@ p{padding-top: 1%; padding-bottom: 1%;}
  button:hover{background: var(--verdec); text-shadow: 1px 1px var(--preto);}
 
  ul{padding-left: 3%;}
+
+ .video{
+    display: block;
+    margin: auto;
+    padding: 1%; /* Só para não "bater" nas margens */
+    background-color: rgba(238, 130, 238, 15%);
+    border-radius: 10px;    
+    text-align: center;
+ }
+
+ @media(min-width: 320px) and (max-width: 820px){
+    div.video{  /* Classe video dentro de uma div */
+        position: relative; /*Posição relativa em relação à div */
+        padding-bottom: 50%;
+        background-color: rgba(238, 130, 238, 15%);
+        border-radius: 10px;
+    }
+
+    div.video > iframe{ /*Classe video dentro da div, que esteja inserido em uma iframe */
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        height: 90%; /*Professor fez testes e para se adequar bem tem que ser assim */
+        width: 90%;
+    }
+ }   
+
+ /* WhatsApp */
+ #whatsapp{
+    width: 70px;
+    height: 50px;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    margin: 6em;
+    font-family: "Delius", cursive; /* Analisar */
+    color: var(--indig);
+    text-shadow: 2px 2px 2px var(--branco);
+ }
+
+ @media(min-width: 320px) and (max-width: 820px){
+    #whatsapp{
+        width: 70px;
+        height: 30px;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        text-align: center;
+        margin: 5em;
+        margin-right: 10px;
+        z-index: 1;
+        color: var(--indig);
+        text-shadow: 2px 2px 2px var(--branco);        
+     }
+ }   
