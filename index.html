@@ -31,12 +31,19 @@
 
                 <script>
                     function escrita(elemento){
+                        //Limpa o HTML e divide em espaços
                         const textoArray = elemento.innerHTML.split('');
+                        //Recebe os espaços
                         elemento.innerHTML = '';
 
+                        //forEach = "para cada"
+                        //Para cada letra, colocar um espaço (representado por i)
                         textoArray.forEach((letra, i) => {
+                            //espaça as informações conforme o tempo definido
                             setTimeout(function(){
+                                //acrescenta uma letra
                                 elemento.innerHTML += letra;
+                                //80ms * posição da letra
                             }, 80*i)
                         });
                     }
